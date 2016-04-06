@@ -64,7 +64,7 @@ $products = array(
 	),
 );
 
-echo json_encode(new ArrayValue($products),JSON_PRETTY_PRINT);
+echo json_encode(new ArrayValue($products),JSON_UNESCAPED_SLASHES);
 
 
 
