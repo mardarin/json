@@ -3,18 +3,6 @@
 /**
 * 
 */
-class ArrayValue implements JsonSerializable
-{	
-	public function __construct(array $array)
-	{
-		$this->array = $array;
-	}
-
-	public function jsonSerialize()
-	{
-		return $this->array;
-	}
-}
 
 $products = array(
 	array(
@@ -64,7 +52,7 @@ $products = array(
 	),
 );
 
-echo json_encode(new ArrayValue($products),JSON_UNESCAPED_SLASHES);
+echo json_encode($products,JSON_UNESCAPED_SLASHES);
 
 
 
